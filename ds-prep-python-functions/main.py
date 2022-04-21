@@ -3,8 +3,8 @@ print(bool_to_int(True))
 get_smaller = lambda a, b: a if (a<b) else b
 print(get_smaller(32,45))
 def cube(base):
-  print(base**3)
-cube(9)
+  return(base**3)
+print(cube(9))
 def absolute_value(a,b):
   if (a<b):
     return(b-a)
