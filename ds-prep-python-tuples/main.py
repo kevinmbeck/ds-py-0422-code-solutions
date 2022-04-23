@@ -12,15 +12,15 @@ print(is_female, is_male)
 def get_survival_info(passenger):
 	(ID, survived, name, gender, age) = passenger
 	passenger = (age, gender, survived)
-	print(passenger)
+	return(passenger)
 
-get_survival_info(passenger)
+print (get_survival_info(passenger))
 
 passenger = (11, True, "Sandstrom, Miss. Marguerite Rut", "female", 4)
-get_survival_info(passenger)
+print (get_survival_info(passenger))
 
 passenger = (28, False, "Fortune, Mr. Charles Alexander", "male", 19)
-get_survival_info(passenger)
+print (get_survival_info(passenger))
 
 passenger = (51, False, "Panula, Master. Juha Niilo", "male", 7)
-get_survival_info(passenger)
+print(get_survival_info(passenger))
