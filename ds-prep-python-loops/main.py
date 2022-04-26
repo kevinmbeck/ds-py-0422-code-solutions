@@ -1,5 +1,5 @@
 record = ("1", "Grimdiana", "Bones", "boulders")
-row = " "
+row = ""
 for x in record:
   row = (row + x + ",")
   print(row)
@@ -34,8 +34,8 @@ for x in player_positions:
   players.append(x)
 print(players)
 positions = set()
-for x in player_positions:
-  positions.add(player_positions[x])
+for x in player_positions.values():
+  positions.add(x)
 print(positions)
 for x, y in player_positions.items():
   print (x + " is on " + y)
