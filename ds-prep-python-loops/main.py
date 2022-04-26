@@ -2,7 +2,7 @@ record = ("1", "Grimdiana", "Bones", "boulders")
 row = ""
 for x in record:
   row = (row + x + ",")
-  print(row)
+print(row)
 values_list = [1, 1, 2, 3, 5, 8, 13, 21, 34]
 for x in values_list:
   print(x)
