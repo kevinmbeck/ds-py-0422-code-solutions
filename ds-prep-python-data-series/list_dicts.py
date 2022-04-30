@@ -48,8 +48,8 @@ def included(year, list):
 print(included(2000, unemployment_rates))
 print(included(2010, unemployment_rates))
 def recent(list):
-    list.sort(key = lambda item: item.get("year"))
-    l = list[-1]
+    l1 = sorted(list, key = lambda item: item.get("year"))
+    l = l1[-1]
     return(l.get("unemployment_rate"))
 print(recent(unemployment_rates))
 def years(list):
@@ -59,15 +59,15 @@ def years(list):
     return(s)
 print(years(unemployment_rates))
 def rates(list):
-    list.sort(key = lambda item: item.get("year"))
+    l1= sorted(list, key = lambda item: item.get("year"))
     l = []
-    for x in list:
+    for x in l1:
         l.append(x["unemployment_rate"])
     return(l)
 print(rates(unemployment_rates))
 def largest(list):
-    list.sort(key=lambda x: x.get("unemployment_rate"))
-    l = list[-1]
+    l1 =sorted(list, key=lambda x: x.get("unemployment_rate"))
+    l = l1[-1]
     return(l.get("unemployment_rate"))
 print(largest(unemployment_rates))
 def greater(list):
@@ -87,8 +87,9 @@ def number(list):
     return(c)
 print(number(unemployment_rates))
 def employment_rates(list):
-    for x in list:
+    copied = list.copy()
+    for x in copied:
         x.update({"employment_rate": 100-x.get("unemployment_rate")})
         del x["unemployment_rate"]
-    return(list)
+    return(copied)
 print(employment_rates(unemployment_rates))
