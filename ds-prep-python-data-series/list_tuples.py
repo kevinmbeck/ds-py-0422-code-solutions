@@ -47,9 +47,9 @@ def included(year, list):
 print(included(2000, unemployment_rates))
 print(included(2010, unemployment_rates))
 def recent(list):
-    list.sort()
-    l = list[-1]
-    return(l[1])
+    l = sorted(list)
+    l1 = l[-1]
+    return(l1[1])
 print(recent(unemployment_rates))
 def years(list):
     s= set()
@@ -58,15 +58,15 @@ def years(list):
     return(s)
 print(years(unemployment_rates))
 def rates(list):
-    list.sort
+    l1 = sorted(list)
     l = []
-    for x in list:
+    for x in l1:
         l.append(x[1])
     return(l)
 print(rates(unemployment_rates))
 def largest(list):
-    list.sort(key=lambda x: x[1])
-    l = list[-1]
+    l1 = sorted(list, key=lambda x: x[1])
+    l = l1[-1]
     return(l[1])
 print(largest(unemployment_rates))
 def employment_rates(l):
