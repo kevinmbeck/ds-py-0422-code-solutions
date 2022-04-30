@@ -93,8 +93,9 @@ def number(d):
     return(c)
 print(number(unemployment_rates))
 def employment_rate(dict):
-    dict['employment_rate'] = dict.pop('unemployment_rate')
-    for x in dict['employment_rate']:
-        dict['employment_rate'] = [100-x for x in dict['employment_rate']]
-    return(dict)
+    copied = dict.copy()
+    copied['employment_rate'] = copied.pop('unemployment_rate')
+    for x in copied['employment_rate']:
+        copied['employment_rate'] = [100-x for x in copied['employment_rate']]
+    return(copied)
 print(employment_rate(unemployment_rates))

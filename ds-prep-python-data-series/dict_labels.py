@@ -91,7 +91,8 @@ def number(d):
     return(c)
 print(number(unemployment_rates))
 def employment_rate(dict):
-    for x, y in dict.items():
-        dict.update({x: 100-y})
-    return(dict)
+    copied = dict.copy()
+    for x, y in copied.items():
+        copied.update({x: 100-y})
+    return(copied)
 print(employment_rate(unemployment_rates))
